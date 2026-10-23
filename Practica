@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Consulta</title>
+</head>
+<body>
+
+<h2>Consulta de Registro</h2>
+
+<input type="text" id="codigo" placeholder="Ingrese código">
+
+<button onclick="buscar()">
+Consultar
+</button>
+
+<p id="resultado"></p>
+
+<script>
+
+function buscar(){
+
+const registros = {
+"A001":"Juan Pérez - Aprobado",
+"A002":"María Soto - Pendiente",
+"A003":"Pedro Díaz - Rechazado"
+};
+
+const codigo =
+document.getElementById("codigo").value;
+
+document.getElementById("resultado").innerHTML =
+registros[codigo] || "Código no encontrado";
+
+}
+
+</script>
+
+</body>
+</html>
